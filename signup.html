@@ -8,6 +8,7 @@
         <body>
                 <form  name="signup" action="#" method="POST">
                       <center> Formulario de Registro: <br><br>
+                       
                        Nombres:
                        <input type="text" name="nombres"  title="Este campo solo acepta letras" required><br><br>
                        Apellidos:
@@ -15,15 +16,28 @@
                        Tipo de Identificacion:
                        <input type="text" name="tipo cedeula"  title="Este campo solo acepta numeros" required><br><br>
                        Nro Identificacion:
-                       <input type="text" name="cedula"  title="Este campo solo acepta numeros" required><br><br>
-                       Genero:
-                       <input type="text" name="genero"  title="Este campo solo acepta numeros" required><br><br>
+                       <input type="text" name="cedula"  onkeypress="if(event.keycode<48 || event.keycode>58) event.returnValue=false; " pattern="[0-9]{7,12}" title="Este campo solo acepta numeros" ><br><br>
+                       Genero: Masculuino  
+                       <input type="radio" name="genero"  title="Seleccione una opcion" required>
+                       Femenino
+                       <input type="radio" name="genero"  title="Seleccione una opcion" required><br><br>
                        Telefono:
                        <input type="text" name="cedula"  title="Este campo solo acepta numeros" required><br><br>
                        Celular:
                        <input type="text" name="cedula"  title="Este campo solo acepta numeros" required><br><br>
                        Departamento Nacimiento:
-                       <input type="text" name="cedula"  title="Este campo solo acepta numeros" required><br><br>
+                       
+                       <select name="Departamentos">
+                            <option>Select</option>
+
+                        <option>Nariño</option>                        
+                        <option>Valle del cauca</option>                        
+                        <option>Putumayo</option>
+                        <option>Cauca</option>                        
+                        <option>Caldas</option>                        
+                        <option>Antioquia</option>
+                        
+                        </select><br><br>
                        Cedula de Nacimiento:
                        <input type="text" name="cedula"  title="Este campo solo acepta numeros" required><br><br>
                        Ciudad de Nacimiento:
@@ -38,6 +52,7 @@
                        <input type="text" name="cedula"  title="Este campo solo acepta numeros" required><br><br>
                        
                        <input type="submit" value="Registrarme">
+                    
                     </center>
                        
 
